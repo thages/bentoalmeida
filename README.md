@@ -1,2 +1,5 @@
 # bentoalmeida
-Bento Almeida
+
+Bento Almeida Digital Transformation Consulting
+
+bentoalmeida.com
