@@ -1,13 +1,15 @@
 const whatsappMessages = {
-  en: "Hello, I would like to contact your company.",
-  pt: "Olá, gostaria de entrar em contato com sua empresa.",
-  es: "Hola, me gustaría contactar con su empresa.",
-  fr: "Bonjour, je voudrais contacter votre entreprise.",
-  de: "Hallo, ich möchte Ihr Unternehmen kontaktieren.",
-  it: "Ciao, vorrei contattare la vostra azienda.",
+  en: "Hello! I would like to get more information about the services and consulting offered.",
+  pt: "Olá! Gostaria de obter mais informações sobre os serviços e consultorias oferecidos.",
+  es: "¡Hola! Me gustaría obtener más información sobre los servicios y consultorías ofrecidos.",
+  fr: "Bonjour ! J’aimerais en savoir plus sur les services et les conseils offerts.",
+  de: "Hallo! Ich würde gerne mehr über die angebotenen Dienstleistungen und Beratungen erfahren.",
+  it: "Ciao! Vorrei avere maggiori informazioni sui servizi e sulla consulenza offerti.",
 };
 
 function updateLanguage(lang) {
+  updateWhatsappMessage(lang);
+
   for (const id in translations[lang]) {
     if (Object.hasOwn(translations[lang], id)) {
       const el = document.getElementById(id);
