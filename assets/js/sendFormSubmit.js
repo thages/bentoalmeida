@@ -1,7 +1,7 @@
 const newsletterForm = document.getElementById("newsletter-form");
 const newsletterSubmitBtn = newsletterForm?.querySelector('[type="submit"]');
 
-const contactForm = document.getElementById("message-form");
+const contactForm = document.getElementById("form-submit");
 const contactFormSubmitBtn = contactForm?.querySelector('[type="submit"]');
 
 const langDict = {
@@ -20,9 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
 
     const formData = new FormData(newsletterForm);
-    for (const [key, value] of formData.entries()) {
-      console.log(`${key}: ${value}`);
-    }
 
     disableSubmit();
 
@@ -46,9 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
 
     const formData = new FormData(contactForm);
-    for (const [key, value] of formData.entries()) {
-      console.log(`${key}: ${value}`);
-    }
 
     disableContactSubmit();
 
@@ -59,8 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         showAlert(langDict[savedLang], "success");
         enableContactSubmit();
-        console.log(response);
-        //contactForm.reset();
+
+        contactForm.reset();
       })
       .catch((error) => {
         console.log(error);
