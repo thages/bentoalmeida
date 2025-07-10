@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossiê Técnico – JoelJota.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1115;
+            --surface: #1c1f26;
+            --card-bg: #262b35;
+            --text: #e1e4e8;
+            --subtext: #8b95a1;
+            --accent: #3b82f6;
+            --urgent: #ff5f56;
+            --high: #ffbd2e;
+            --medium: #ffc107;
+            --low: #28a745;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background: var(--surface);
+            padding: 2rem 1rem;
+            border-bottom: 1px solid #2c313c;
+        }
+
+        header .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        header .subtitle {
+            margin-top: 0.5rem;
+            color: var(--subtext);
+            font-size: 0.9rem;
+        }
+
+        header .autor {
+
+            color: var(--subtext);
+            font-size: 0.9rem;
+        }
+
+
+        header .logo {
+            line-height: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            max-height: 36px;
+            margin-right: 8px;
+        }
+
+        header .logo h1 {
+            font-size: 32px;
+            margin: 0;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        header .logo span {
+            color: #ffc451;
+            font-size: 32px;
+            transform: scaleX(0.5);
+            margin-right: -8px;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 2rem auto;
+            /* gap: 2rem; */
+            padding: 0 1rem;
+        }
+
+        .toc {
+            min-width: 180px;
+            background: var(--surface);
+            padding: 1rem;
+            border-radius: 8px;
+            position: sticky;
+            top: 1rem;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+
+        .toc ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .toc li+li {
+            margin-top: 0.5rem;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .filter {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter label {
+            color: var(--subtext);
+        }
+
+        .filter select {
+            padding: 0.4rem 0.6rem;
+            border-radius: 4px;
+            border: 1px solid #2c313c;
+            background: var(--surface);
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-header {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header .info {
+            flex: 1 1 auto;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .card-header .tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .tag.P0 {
+            background: var(--urgent);
+        }
+
+        .tag.P1 {
+            background: var(--high);
+        }
+
+        .tag.P2 {
+            background: var(--medium);
+        }
+
+        .tag.P3 {
+            background: var(--low);
+        }
+
+        .card-body {
+            padding: 0 1rem 1rem;
+            flex: 1;
+        }
+
+        .card-body img {
+            width: 100%;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #2c313c;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: var(--surface);
+            font-weight: 500;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        ol {
+            padding-left: 1.3rem;
+        }
+
+        ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Modal overlay */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #protected {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="index-page">
+    <div id="protected">
+
+        <header>
+            <a href="/index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+                <span id="logo-arrow">◢</span>
+                <h1 class="sitename" id="logo-title">BA</h1>
+            </a>
+            <div class="container">
+                <h1>Dossiê Técnico – JoelJota.com</h1>
+                <p class="subtitle">Análise de 10 Jul 2025, 15h (GMT-3)</p>
+                <p class="autor">por Thages W. de Almeida</p>
+
+            </div>
+        </header>
+        <div class="container">
+            <nav class="toc">
+                <h2>Sumário</h2>
+                <ul>
+                    <li><a href="#achados">Achados Críticos</a></li>
+                    <li><a href="#diagnostico">Diagnóstico Técnico</a></li>
+                    <li><a href="#roadmap">Roadmap de Ação</a></li>
+                    <li><a href="#impacto">Impacto Estimado</a></li>
+                    <li><a href="#conclusao">Conclusão</a></li>
+                    <li><a href="#proximos-passos">Próximos Passos</a></li>
+                </ul>
+            </nav>
+            <main class="main-content">
+                <section id="achados" class="section">
+                    <h2>Achados Críticos</h2>
+                    <div class="filter">
+                        <label for="priorityFilter">Filtrar prioridade:</label>
+                        <select id="priorityFilter">
+                            <option value="all">Todas</option>
+                            <option value="P0">Urgente (P0)</option>
+                            <option value="P1">Alta (P1)</option>
+                            <option value="P2">Média (P2)</option>
+                            <option value="P3">Baixa (P3)</option>
+                        </select>
+                    </div>
+                    <div class="cards" id="cards"></div>
+                </section>
+                <section id="diagnostico" class="section">
+                    <h2>Diagnóstico Técnico</h2>
+                    <p>Identificamos um erro 500 crítico e falhas em chamadas AJAX, formulários e carregamento de
+                        scripts,
+                        impactando disponibilidade, captura de leads e conversão.</p>
+                    <ul>
+                        <li>Falha em <code>admin-ajax.php</code> bloqueia formulários e tracking.</li>
+                        <li>Limites de PHP ou plugins de segurança podem estar reprimindo requisições.</li>
+                        <li>Nonces expirados ou conflitos de versões JS (jQuery) afetam UX.</li>
+                        <li>Links externos quebrados (Amazon, Bitrix24) prejudicam monetização.</li>
+                    </ul>
+                </section>
+                <section id="roadmap" class="section">
+                    <h2>Roadmap de Ação (48 h)</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Passo</th>
+                                <th>Ação</th>
+                                <th>Responsável</th>
+                                <th>Prazo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A1</td>
+                                <td>Ativar <code>WP_DEBUG_LOG</code> e reproduzir erro</td>
+                                <td>Dev/Host</td>
+                                <td>2 h</td>
+                            </tr>
+                            <tr>
+                                <td>A2</td>
+                                <td>Desativar plugins e isolar causa</td>
+                                <td>Dev</td>
+                                <td>4 h</td>
+                            </tr>
+                            <tr>
+                                <td>A3</td>
+                                <td>Ajustar limites de memória/timeout PHP</td>
+                                <td>Host</td>
+                                <td>1 h</td>
+                            </tr>
+                            <tr>
+                                <td>A4</td>
+                                <td>Corrigir formulários (nonces/webhooks)</td>
+                                <td>Dev/Marketing</td>
+                                <td>6 h</td>
+                            </tr>
+                            <tr>
+                                <td>A5</td>
+                                <td>Enfileirar jQuery via WP Core/CDN</td>
+                                <td>Dev</td>
+                                <td>1 h</td>
+                            </tr>
+                            <tr>
+                                <td>A6</td>
+                                <td>Ajustar Permissions Policy para mídia</td>
+                                <td>Front-end</td>
+                                <td>2 h</td>
+                            </tr>
+                            <tr>
+                                <td>A7</td>
+                                <td>Atualizar link Amazon/UTM</td>
+                                <td>Marketing</td>
+                                <td>1 h</td>
+                            </tr>
+                            <tr>
+                                <td>A8</td>
+                                <td>Redirecionar/recriar subdomínio Bitrix24</td>
+                                <td>Ops</td>
+                                <td>1 h</td>
+                            </tr>
+                            <tr>
+                                <td>A9</td>
+                                <td>Otimizar Core Web Vitals (lazy-load, compressão)</td>
+                                <td>Front-end</td>
+                                <td>4 h</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="impacto" class="section">
+                    <h2>Impacto Estimado</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Métrica</th>
+                                <th>Antes</th>
+                                <th>Após (proj.)</th>
+                                <th>Ganho</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Taxa de captura de leads</td>
+                                <td>0%</td>
+                                <td>3–5%</td>
+                                <td>+3–5 pp</td>
+                            </tr>
+                            <tr>
+                                <td>Conversão página Livros</td>
+                                <td>~0%</td>
+                                <td>1–2%</td>
+                                <td>Nova receita</td>
+                            </tr>
+                            <tr>
+                                <td>Tempo médio no site</td>
+                                <td>0:45 s</td>
+                                <td>1:30 s</td>
+                                <td>+100%</td>
+                            </tr>
+                            <tr>
+                                <td>PageSpeed (mobile)</td>
+                                <td>38</td>
+                                <td>70+</td>
+                                <td>SEO & Ads Score ↑</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="conclusao" class="section">
+                    <h2>Conclusão</h2>
+                    <p>O site vaza tráfego, leads e receita devido a falhas críticas de infraestrutura WordPress e links
+                        quebrados. Correções em 48 h restauram estabilidade, reativam formulários e otimizam
+                        monetização.
+                    </p>
+                </section>
+                <section id="proximos-passos" class="section">
+                    <h2>Próximos Passos</h2>
+                    <ol>
+                        <li>Aguardar acesso SFTP/hosting para auditoria de logs.</li>
+                        <li>Agendar call de 15 min para validar prioridades.</li>
+                        <li>Implementar monitoramento uptime e alertas.</li>
+                    </ol>
+                </section>
+            </main>
+        </div>
+
+        <!-- Modal Overlay -->
+        <div id="image-modal" class="modal">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content" id="modal-img" alt="Imagem ampliada">
+        </div>
+    </div>
+    <script>
+        const data = [
+            { id: 1, title: 'Erro 500 na /home/', impact: 'Site indisponível, prejudica SEO e tráfego pago.', priority: 'P0', img: '/joeljota/images/erro1.png' },
+            { id: 2, title: 'Falha em /wp-admin/admin-ajax.php', impact: 'Quebra de funcionalidades AJAX, formulários e tracking.', priority: 'P0', img: '/joeljota/images/erro2.png' },
+            { id: 3, title: 'Formulários retornam “× error”', impact: 'Leads não são salvos, perda direta de receita.', priority: 'P1', img: '/joeljota/images/erro3.png' },
+            { id: 4, title: 'jQuery 3.7.1 não carregado', impact: 'Scripts do tema/plugins falham, UX degradada.', priority: 'P1', img: '/joeljota/images/erro4.png' },
+            { id: 5, title: 'Link Amazon vazio', impact: 'Fluxo de compra interrompido, zero conversão.', priority: 'P1', img: '/joeljota/images/erro5.png' },
+            { id: 6, title: 'Permissions Policy — encrypted-media', impact: 'Bloqueia vídeos, afeta Core Web Vitals.', priority: 'P2', img: '/joeljota/images/erro6.png' },
+            { id: 7, title: 'Popup sobreposto ao conteúdo vazio', impact: 'Ao clicar em "saiba mais" não carrega o conteúdo.', priority: 'P2', img: '/joeljota/images/erro7.png' },
+            { id: 8, title: 'favicon.ico 500', impact: 'Console noise, indica configuração de servidor deficiente.', priority: 'P3', img: '/joeljota/images/erro8.png' },
+            { id: 9, title: 'Bitrix24 inativo (404/410)', impact: 'Fricção no contato, insegurança.', priority: 'P2', img: '/joeljota/images/erro9.png' }
+        ];
+
+        const container = document.getElementById('cards');
+        function renderCards(filter = 'all') {
+            container.innerHTML = '';
+            data.filter(f => filter === 'all' || f.priority === filter)
+                .forEach(f => {
+                    const card = document.createElement('div'); card.className = 'card';
+                    card.innerHTML = `
+          <div class="card-header">
+            <div class="info"><h3>#${f.id} — ${f.title}</h3><p>${f.impact}</p></div>
+            <div class="tag ${f.priority}">${f.priority}</div>
+          </div>
+          <div class="card-body">
+            <img src="${f.img}" alt="${f.title}">
+          </div>
+        `;
+                    container.appendChild(card);
+                });
+            attachImageHandlers();
+        }
+        document.getElementById('priorityFilter').addEventListener('change', e => renderCards(e.target.value));
+        document.addEventListener('DOMContentLoaded', () => renderCards());
+
+        // Modal logic
+        function attachImageHandlers() {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            const closeBtn = document.querySelector('.modal-close');
+            document.querySelectorAll('.card-body img').forEach(img => {
+                img.addEventListener('click', () => {
+                    modal.style.display = 'flex';
+                    modalImg.src = img.src;
+                });
+            });
+            closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+            modal.addEventListener('click', e => {
+                if (e.target === modal) modal.style.display = 'none';
+            });
+        }
+    </script>
+    <script>
+        (function () {
+            const CORRECT = "from-scratch";
+            const entered = prompt("Enter password:");
+            if (entered === CORRECT) {
+                document.getElementById("protected").style.display = "block";
+            } else {
+                alert("❌ Incorrect password");
+
+                window.location.href = "/";
+            }
+        })();
+    </script>
+</body>
+
+</html>
