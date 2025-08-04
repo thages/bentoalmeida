@@ -50,7 +50,7 @@ function updateCartUI() {
     cart.map(({ p, qty }) => `• ${qty}× ${p.name}`).join("%0A") +
     `%0A*Total:* ${fmt(totalPYG)}`;
 
-  const phone = "5500000000000"; // ← coloque seu número com DDI/DD
+  const phone = "5545991580812"; // ← coloque seu número com DDI/DD
   document.getElementById(
     "whatsLink"
   ).href = `https://wa.me/${phone}?text=${message}`;
