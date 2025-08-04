@@ -15,7 +15,9 @@
 
 <body class="bg-white text-gray-900 font-sans">
     <header class="bg-white shadow">
-        <div class="container mx-auto px-4 py-6 flex items-center justify-between">
+        <div
+            class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-0 justify-between">
+
             <img src="public/images/logo.png" alt="Capitão Bar Logo" class="h-12">
             <h1 class="text-3xl font-cursive text-text-dark">Menú Capitão Bar</h1>
             <!-- Category Dropdown -->
@@ -31,7 +33,7 @@
                     <option>Todos los platos</option>
                 </select>
                 <!-- Search -->
-                <div class="relative">
+                <div class="hidden md:block relative">
                     <input id="searchInput" type="text" placeholder="Buscar en el menú"
                         class="border border-gray-300 rounded pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent w-64" />
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 absolute left-3 top-2.5"
@@ -45,8 +47,7 @@
     </header>
     <!-- 1A ‑ Modal de Item -->
     <div id="itemModal" class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 hidden">
-        <div class="bg-white w-full max-w-lg rounded-lg overflow-hidden">
-
+        <div class="bg-white w-[90%] max-w-lg rounded-lg overflow-hidden mx-4">
             <!-- imagem + fechar -->
             <div class="relative">
                 <img id="modalImg" src="" alt="" class="w-full h-60 object-cover">
@@ -102,10 +103,14 @@
             </a>
         </div>
     </div>
-
-    <main class="container mx-auto px-4 py-8 max-w-[60%]">
+    <div class="container mx-auto max-w-[95%] md:hidden">
         <div
             class="w-full max-w-[1276px] aspect-[1276/250] mx-auto rounded-lg shadow bg-[url('public/images/banner2.jpg')] bg-cover bg-center ">
+        </div>
+    </div>
+    <main class="container mx-auto px-4 py-8 max-w-[60%]">
+        <div
+            class="hidden md:block max-w-[1276px] aspect-[1276/250] mx-auto rounded-lg shadow bg-[url('public/images/banner2.jpg')] bg-cover bg-center ">
             <!-- Optional overlay or content -->
             <!-- <div class="flex items-center justify-center w-full h-full bg-black/30">
                 <h2 class="text-white text-xl md:text-3xl font-semibold">Promo Banner</h2>

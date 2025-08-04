@@ -235,7 +235,7 @@ function renderListCategory(name, products) {
   products.forEach((p) => {
     const card = document.createElement("div");
     card.className =
-      "flex bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden h-full p-3 cursor-pointer hover:shadow-md";
+      "flex flex-col md:flex-row bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden h-full p-3 cursor-pointer hover:shadow-md";
 
     /* texto */
     card.innerHTML = `
@@ -256,7 +256,9 @@ function renderListCategory(name, products) {
       "https://via.placeholder.com/400x300?text=" + encodeURIComponent(p.name)
     }`;
     img.alt = "";
-    img.className = "w-32 md:w-32 lg:w-44 lg:h-32 object-cover flex-shrink-0";
+    img.className =
+      "w-full md:w-32 lg:w-44 lg:h-32 object-cover flex-shrink-0 mb-3 md:mb-0";
+
     card.append(img);
 
     card.onclick = () => {
