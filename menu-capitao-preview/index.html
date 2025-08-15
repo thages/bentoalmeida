@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-06H192M5X2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-06H192M5X2');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Menú Interactivo Capitão Bar</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { cursive: ['"Pacifico"', 'cursive'] }, colors: { accent: '#D4AF37', 'text-dark': '#1F2937' } } } }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Menú Capitão Bar">
+    <meta property="og:description" content="Descubre nuestros platos deliciosos en Capitão Bar.">
+    <meta property="og:image" content="https://bentoalmeida.com/menu-capitao-preview/public/images/banner2.jpg">
+    <meta property="og:url" content="https://bentoalmeida.com/menu-capitao-preview">
+    <meta property="og:type" content="website">
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+    <header class="bg-white shadow">
+        <div
+            class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-0 justify-between">
+
+            <img src="public/images/logo.png" alt="Capitão Bar Logo" class="h-12">
+            <h1 class="text-3xl font-cursive text-text-dark">Menú Capitão Bar</h1>
+            <!-- Category Dropdown -->
+            <div class="flex items-center space-x-4">
+                <select id="currencySelector" class="border rounded px-2 py-1">
+                    <option value="PYG">PYG - ₲</option>
+                    <option value="BRL">BRL - R$</option>
+                    <option value="USD">USD - $</option>
+                </select>
+
+                <select id="categoryFilter"
+                    class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent">
+                    <option>Todos los platos</option>
+                </select>
+                <!-- Search -->
+                <div class="hidden md:block relative">
+                    <input id="searchInput" type="text" placeholder="Buscar en el menú"
+                        class="border border-gray-300 rounded pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent w-64" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 absolute left-3 top-2.5"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-4.35-4.35m0 0a7 7 0 10-9.9 0 7 7 0 009.9 0z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 1A ‑ Modal de Item -->
+    <div id="itemModal" class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 hidden">
+        <div class="bg-white w-[90%] max-w-lg rounded-lg overflow-hidden mx-4">
+            <!-- imagem + fechar -->
+            <div class="relative">
+                <img id="modalImg" src="" alt="" class="w-full h-60 object-cover">
+                <button id="closeModal" class="absolute top-2 right-2 bg-white/70 rounded-full p-1">
+                    ✕
+                </button>
+            </div>
+
+            <!-- conteúdo -->
+            <div class="p-6 flex flex-col gap-4">
+                <h3 id="modalName" class="text-xl font-semibold"></h3>
+                <p id="modalDesc" class="text-gray-600 text-sm"></p>
+                <span id="modalPrice" class="text-lg font-medium"></span>
+
+                <!-- quantidade -->
+                <div class="flex items-center gap-4">
+                    <button id="minusQty" class="border rounded w-8 h-8 flex items-center justify-center">−</button>
+                    <span id="qty" class="w-6 text-center">1</span>
+                    <button id="plusQty" class="border rounded w-8 h-8 flex items-center justify-center">+</button>
+                </div>
+
+                <button id="addToCart" class="mt-4 bg-red-600 text-white w-full py-2 rounded">
+                    Adicionar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1B ‑ Ícone flutuante do carrinho -->
+    <button id="cartBtn"
+        class="fixed bottom-6 right-6 bg-gray-300 text-white rounded-full h-14 w-14 flex items-center justify-center shadow-lg">
+        🛒
+        <span id="cartCount" class="absolute -top-1 -right-1 bg-white text-gray-600 text-xs rounded-full px-1">0</span>
+    </button>
+
+    <!-- 1C ‑ Drawer lateral -->
+    <div id="cartDrawer"
+        class="fixed top-0 right-0 w-80 max-w-full h-full bg-white shadow-lg z-50 translate-x-full transition-transform">
+        <div class="flex justify-between items-center p-4 border-b">
+            <h2 class="text-lg font-semibold">Seu pedido</h2>
+            <button id="closeDrawer">✕</button>
+        </div>
+
+        <div id="cartItems" class="p-4 flex flex-col gap-4 overflow-y-auto h-[calc(100%-160px)]"></div>
+
+        <div class="p-4 border-t">
+            <div class="flex justify-between mb-3">
+                <span>Total:</span>
+                <span id="cartTotal" class="font-medium">0</span>
+            </div>
+            <a id="whatsLink" target="_blank" class="block text-center bg-green-600 text-white py-2 rounded">
+                Enviar via WhatsApp
+            </a>
+        </div>
+    </div>
+    <div class="container mx-auto max-w-[95%] md:hidden">
+        <div
+            class="w-full max-w-[1276px] aspect-[1276/250] mx-auto rounded-lg shadow bg-[url('public/images/banner2.jpg')] bg-cover bg-center ">
+        </div>
+    </div>
+    <main class="container mx-auto px-4 py-8 max-w-[60%]">
+        <div
+            class="hidden md:block max-w-[1276px] aspect-[1276/250] mx-auto rounded-lg shadow bg-[url('public/images/banner2.jpg')] bg-cover bg-center ">
+            <!-- Optional overlay or content -->
+            <!-- <div class="flex items-center justify-center w-full h-full bg-black/30">
+                <h2 class="text-white text-xl md:text-3xl font-semibold">Promo Banner</h2>
+            </div> -->
+        </div>
+        <div id="menu"></div>
+    </main>
+    <script type="module" src="./assets/JS/renderLayout.js"></script>
+</body>
+
+</html>
