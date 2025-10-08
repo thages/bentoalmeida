@@ -37,12 +37,14 @@ function updateWhatsappMessage(lang) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  const pathLang = window.location.pathname.split("/")[1];
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlLang = urlParams.get("lang");
+
   const supportedLangs = ["es", "pt", "en"];
 
   const savedLang = localStorage.getItem("preferredLanguage");
 
-  const lang = supportedLangs.includes(pathLang) ? pathLang : savedLang || "es";
+  const lang = supportedLangs.includes(urlLang) ? urlLang : savedLang || "es";
 
   updateLanguage(lang);
 
