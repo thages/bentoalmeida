@@ -37,11 +37,16 @@ function updateWhatsappMessage(lang) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("preferredLanguage") || "en";
+  const pathLang = window.location.pathname.split("/")[1];
+  const supportedLangs = ["es", "pt", "en"];
 
-  updateLanguage(savedLang);
+  const savedLang = localStorage.getItem("preferredLanguage");
 
-  const matchingLi = document.querySelector(`li[data-value="${savedLang}"]`);
+  const lang = supportedLangs.includes(pathLang) ? pathLang : savedLang || "es";
+
+  updateLanguage(lang);
+
+  const matchingLi = document.querySelector(`li[data-value="${lang}"]`);
   if (matchingLi) {
     matchingLi.classList.add("active");
 
@@ -87,21 +92,6 @@ langList.addEventListener("click", (e) => {
     menuDropdown.classList.remove("open");
   }
 });
-
-// searchInput.addEventListener("input", (e) => {
-//   const term = e.target.value.toLowerCase();
-//   const items = langList.querySelectorAll("li[data-country]");
-//   items.forEach((li) => {
-//     const country = li.dataset.country.toLowerCase();
-//     const lang = li.dataset.lang.toLowerCase();
-
-//     if (country.includes(term) || lang.includes(term)) {
-//       li.style.display = "";
-//     } else {
-//       li.style.display = "none";
-//     }
-//   });
-// });
 
 document.addEventListener("click", (evt) => {
   let targetEl = evt.target;
