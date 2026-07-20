@@ -1,8 +1,5 @@
-const newsletterForm = document.getElementById("newsletter-form");
-const newsletterSubmitBtn = newsletterForm?.querySelector('[type="submit"]');
-
-const contactForm = document.getElementById("form-submit");
-const contactFormSubmitBtn = contactForm?.querySelector('[type="submit"]');
+const messageForm = document.getElementById("message-form");
+const contactSubmitBtn = document.getElementById("form-submit");
 
 const langDict = {
   en: "Your message has been sent. Thank you!",
@@ -14,87 +11,54 @@ const langDict = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  emailjs.init("fkBKILUt8o7m56yIj");
+  if (typeof emailjs !== "undefined") {
+    emailjs.init("fkBKILUt8o7m56yIj");
+  }
 
-  newsletterForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  if (messageForm) {
+    messageForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      disableContactSubmit();
 
-    const formData = new FormData(newsletterForm);
-
-    disableSubmit();
-
-    emailjs
-      .sendForm("service_vyz4mk6", "template_xt7ke2g", "#newsletter-form")
-      .then((response) => {
-        const savedLang = localStorage.getItem("preferredLanguage") || "en";
-
-        showAlert(langDict[savedLang], "success");
-        enableSubmit();
-
-        newsletterForm.reset();
-      })
-      .catch((error) => {
-        showAlert("Oops... " + JSON.stringify(error), "error");
-        enableSubmit();
-      });
-  });
-
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(contactForm);
-
-    disableContactSubmit();
-
-    emailjs
-      .sendForm("service_vyz4mk6", "template_xt7ke2g", "#message-form")
-      .then((response) => {
-        const savedLang = localStorage.getItem("preferredLanguage") || "en";
-
-        showAlert(langDict[savedLang], "success");
-        enableContactSubmit();
-
-        contactForm.reset();
-      })
-      .catch((error) => {
-        console.log(error);
-        showAlert("Oops... " + JSON.stringify(error), "error");
-        enableContactSubmit();
-      });
-  });
+      emailjs
+        .sendForm("service_vyz4mk6", "template_xt7ke2g", "#message-form")
+        .then(() => {
+          const savedLang = localStorage.getItem("preferredLanguage") || "en";
+          showAlert(langDict[savedLang] || langDict.en, "success");
+          enableContactSubmit();
+          messageForm.reset();
+        })
+        .catch((error) => {
+          console.log(error);
+          showAlert("Oops... " + JSON.stringify(error), "error");
+          enableContactSubmit();
+        });
+    });
+  }
 });
 
-function disableSubmit() {
-  newsletterSubmitBtn.dataset.originalText = newsletterSubmitBtn.value;
-  newsletterSubmitBtn.value = "Sending...";
-  newsletterSubmitBtn.disabled = true;
-}
-
-function enableSubmit() {
-  newsletterSubmitBtn.value = newsletterSubmitBtn.dataset.originalText;
-  newsletterSubmitBtn.disabled = false;
-}
-
 function disableContactSubmit() {
-  contactFormSubmitBtn.dataset.originalText = contactFormSubmitBtn.value;
-  contactFormSubmitBtn.value = "Sending...";
-  contactFormSubmitBtn.disabled = true;
+  if (!contactSubmitBtn) return;
+  contactSubmitBtn.dataset.originalText = contactSubmitBtn.textContent;
+  contactSubmitBtn.textContent = "Sending...";
+  contactSubmitBtn.disabled = true;
 }
 
 function enableContactSubmit() {
-  contactFormSubmitBtn.value = contactFormSubmitBtn.dataset.originalText;
-  contactFormSubmitBtn.disabled = false;
+  if (!contactSubmitBtn) return;
+  contactSubmitBtn.textContent =
+    contactSubmitBtn.dataset.originalText || contactSubmitBtn.textContent;
+  contactSubmitBtn.disabled = false;
 }
 
 function showAlert(message, type = "") {
   let customAlert = document.getElementById("customAlert");
+  if (!customAlert) return;
 
   customAlert.className = "custom-alert hidden";
-
   if (type) {
     customAlert.classList.add(type);
   }
-
   customAlert.textContent = message;
 
   void customAlert.offsetWidth;
@@ -109,17 +73,9 @@ function showAlert(message, type = "") {
 
 function hideAlert() {
   let customAlert = document.getElementById("customAlert");
+  if (!customAlert) return;
   customAlert.classList.remove("show");
-
   setTimeout(() => {
     customAlert.classList.add("hidden");
   }, 300);
-}
-
-function onFormSuccess() {
-  showAlert("Your message has been sent. Thank you!", "success");
-}
-
-function onFormError() {
-  showAlert("Oops... Something went wrong.", "error");
 }

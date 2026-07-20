@@ -1,381 +1,493 @@
 const translations = {
   en: {
     // Nav
-    "nav-home": "Home",
+    "nav-problem": "The problem",
+    "nav-approach": "Approach",
+    "nav-work": "Work",
     "nav-about": "About",
-    "nav-services": "Services",
-    "nav-team": "Industries",
     "nav-contact": "Contact",
-    "btn-connect": "Connect with us",
+    "nav-cta": "Start with a diagnostic",
     "lang-menu-header-title": "Select location",
 
     // Hero
-    "hero-title": "Empowering Growth Through Insightful Strategies",
-    "hero-description":
-      "Your trusted partner for market intelligence, digital transformation, and industrial automation solutions.",
-    "hero-icon1": "Strategic Business Consulting",
-    "hero-icon2": "Market Intelligence Reports",
-    "hero-icon3": "Automation Technology Solutions",
-    "hero-icon4": "Solutions for Business Operations",
-    "hero-icon5": "Systems Customizations & Integrations",
+    "hero-eyebrow": "For growing, operationally complex businesses",
+    "hero-title-1": "Your business grew.",
+    "hero-title-2": "The way it runs didn't.",
+    "hero-desc":
+      "You're holding a growing operation together with spreadsheets, WhatsApp, and a dozen systems that don't talk to each other. We design and build the integrated system your business actually runs on — so you get control, visibility, and room to scale.",
+    "hero-cta": "Find your biggest bottleneck",
+    "hero-cta2": "Talk on WhatsApp",
+    "hero-trust":
+      "Trusted by operating businesses across distribution, logistics & agribusiness.",
 
-    // About
-    "about-title": "About Bento Almeida",
-    "about-intro":
-      "Bento Almeida is a consulting firm dedicated to helping businesses excel through market intelligence, strategic insights, and technological innovation. We partner with clients to transform their operations and achieve sustainable growth.",
-    "about-bullet1": "Technology strategy and digital foundation design.",
-    "about-bullet2": "Technology capability assessment.",
-    "about-bullet3": "Technology operating model design.",
-    "about-summary":
-      "Our approach is rooted in delivering practical solutions that drive measurable results. We combine deep industry expertise with innovative technologies to help businesses navigate challenges, seize opportunities, and stay ahead in a rapidly evolving market. With Bento Almeida, you gain a trusted partner committed to your success through strategic guidance and cutting-edge solutions.",
+    // Recognition
+    "recog-eyebrow": "Sound familiar?",
+    "recog-title": "This is what outgrowing your systems feels like.",
+    "recog-closer":
+      "The company is growing. The operation underneath it isn't keeping up.",
+    "recog-1":
+      "The real numbers live in someone's spreadsheet — and only they know how it works.",
+    "recog-2": "Approvals happen over WhatsApp. So does everything else.",
+    "recog-3":
+      "Every report is rebuilt by hand, and it's out of date the moment it's finished.",
+    "recog-4": "Four systems hold your data. None of them agree.",
+    "recog-5":
+      "If the wrong person is on vacation, part of the business stops.",
 
-    // Features
-    "features-title1": "Data-Driven Insights",
-    "features-desc1":
-      "Harnessing the power of analytics to drive informed decision-making",
-    "features-title2": "Customized Solutions",
-    "features-desc2":
-      "Tailored approaches to meet the unique needs of each client",
-    "features-title3": "Scalable Technology",
-    "features-desc3": "Solutions that grow with your business",
-    "features-title4": "Seamless Integrations",
-    "features-desc4":
-      "Connecting systems and processes for operational efficiency",
-    "features-title5": "Expert Support",
-    "features-desc5": "Ongoing assistance from industry specialists",
+    // Insight
+    "insight-eyebrow": "The real problem",
+    "insight-title-1": "You don't need more software.",
+    "insight-title-2":
+      "You need your systems to match how you actually work.",
+    "insight-desc":
+      "Every new tool solved one problem and created another island. What's missing isn't another app — it's the connected system that ties the whole operation together.",
 
-    // Services
-    "services-heading": "Services",
-    "services-check": "Check our Services",
-    "services-span":
-      "Comprehensive suite of services designed to help companies overcome bottlenecks and implement efficient solutions",
-    "services-item1": "Process Automation & Workflow Optimization",
-    "services-desc1":
-      "Utilizing AI, RPA, and IoT to streamline operations and reduce costs.",
-    "services-item2": "Digital Transformation Consulting",
-    "services-desc2":
-      "Supporting the adoption of cloud computing, ERP systems, and CRM platforms.",
-    "services-item3": "Custom Software Development",
-    "services-desc3":
-      "Building enterprise applications, APIs, and microservices for operational efficiency.",
-    "services-item4": "Systems Integration & Technology Infrastructure",
-    "services-desc4":
-      "Unifying platforms and legacy systems for seamless data flow.",
-    "services-item5": "Business Intelligence & Data Analytics",
-    "services-desc5":
-      "Delivering insights through advanced data analysis and predictive modeling.",
-    "services-item6": "Risk Management & Cybersecurity",
-    "services-desc6":
-      "Implementing security measures to protect digital assets and ensure compliance.",
+    // What we do
+    "do-eyebrow": "What we do",
+    "do-title": "We build the system your business runs on.",
+    "do-desc":
+      "One place where information is connected, work is automated, and you can finally see what's happening. We don't sell technology — we remove the operational friction quietly costing you time, money, and control.",
+    "do-1-t": "Connected",
+    "do-1-d": "Your tools and data finally work as one system — not a dozen islands.",
+    "do-2-t": "Automated",
+    "do-2-d": "The repetitive, manual work runs itself — accurately, every time.",
+    "do-3-t": "Visible",
+    "do-3-d": "Live visibility across the whole operation, so decisions stop being guesses.",
 
-    // CTA
-    "cta-title": "Would you like to scale?",
-    "cta-text":
-      "Take the first step toward transforming your business. Contact us to discover how our insights and solutions can drive your success. Let's build a smarter future together.",
-    "cta-btn": "Let's connect",
+    // Method
+    "method-eyebrow": "How it works",
+    "method-title": "A clear path — not a leap of faith.",
+    "method-desc":
+      "Low risk, high signal. We prove the value at each step before building the next.",
+    "step1-t": "Diagnose",
+    "step1-d":
+      "We learn how your business really operates and find the bottlenecks, manual work, and blind spots draining it.",
+    "step2-t": "Design",
+    "step2-d":
+      "We map a practical blueprint — the processes, systems, integrations, and automation that will move the needle most.",
+    "step3-t": "Build",
+    "step3-d":
+      "We implement the highest-value improvements: integrations, internal systems, automations, dashboards, and AI where it earns its place.",
 
-    // Team (Industries)
-    "team-heading": "Industries",
-    "team-subheading": "Insights and Services",
-    "team-description":
-      "Bento Almeida brings industry-specific expertise, delivering solutions tailored to meet unique sector challenges:",
-    "team-construction": "Construction",
-    "team-construction-desc":
-      "Introducing project management systems and automated reporting tools to streamline operations.",
-    "team-manufacturing": "Manufacturing",
-    "team-manufacturing-desc":
-      "Implementing IoT, predictive maintenance, and process automation to enhance efficiency.",
-    "team-logistics": "Logistics",
-    "team-logistics-desc":
-      "Enhancing route optimization, real-time tracking, and inventory management solutions.",
-    "team-consumer": "Consumer Goods",
-    "team-consumer-desc":
-      "Applying data analytics to enhance supply chain visibility and consumer insights.",
+    // Transformation
+    "trans-eyebrow": "The shift",
+    "trans-title": "From operational chaos to one system.",
+    "from-title": "Today",
+    "from-1": "Scattered information",
+    "from-2": "Manual, repetitive work",
+    "from-3": "Disconnected tools",
+    "from-4": "Operations that depend on specific people",
+    "from-5": "Flying blind",
+    "to-title": "With Bento Almeida",
+    "to-1": "One connected source of truth",
+    "to-2": "Automated workflows",
+    "to-3": "Systems that talk to each other",
+    "to-4": "Processes that outlast any individual",
+    "to-5": "Decisions backed by real-time data",
 
-    // Contact
-    "contact-heading": "Contact",
-    "contact-subheading": "Contact Us",
-    "contact-addr-title": "Address",
-    "contact-addr-desc": "11 KM Acaray, Ciudad del Este, PY",
-    "contact-call-title": "Call Us",
-    "contact-call-desc": "+595 984 455 760",
-    "contact-email-title": "Email Us",
-    "contact-email-desc": "thagesalmeida@bentoalmeida.com",
-    name: "Your Name",
-    email: "Your Email",
-    subject: "Subject",
-    message: "Message",
-    "form-submit": "Send Message",
+    // Proof
+    "proof-eyebrow": "Proof",
+    "proof-title": "Real operations, rebuilt.",
+    "proof-desc":
+      "How we turn operational complexity into working systems — the problem, what changed, and the outcome.",
+    "label-problem-1": "The problem",
+    "label-problem-2": "The problem",
+    "label-problem-3": "The problem",
+    "label-changed-1": "What changed",
+    "label-changed-2": "What changed",
+    "label-changed-3": "What changed",
+    "label-outcome-1": "The outcome",
+    "label-outcome-2": "The outcome",
+    "label-outcome-3": "The outcome",
+    "proof-logos-title": "Trusted by operating businesses across the region",
 
-    // Footer
-    "footer-links-title1": "Useful Links",
-    "footer-link-home": "Home",
-    "footer-link-about": "About us",
-    "footer-link-services": "Services",
-    "footer-link-terms": "Terms of service",
-    "footer-link-privacy": "Privacy policy",
-    "footer-links-title2": "Our Services",
-    "footer-service1": "Web Design",
-    "footer-service2": "Web Development",
-    "footer-service3": "Product Management",
-    "footer-service4": "Marketing",
-    "footer-service5": "Graphic Design",
-    "footer-newsletter-title": "Our Newsletter",
-    "footer-newsletter-desc":
-      "Subscribe to our newsletter and receive the latest news about our products and services!",
-  },
+    // Founder
+    "founder-eyebrow": "Who's behind it",
+    "founder-lead":
+      "You're not hiring an agency. You're working with someone who's been on both sides.",
+    "founder-bio":
+      "Bento Almeida is led by a software architect and engineer who also understands how real businesses run — operations, management, and the messy reality in between. That's the difference: we diagnose the business before we touch the technology. Fewer hands, more seniority, and a partner who owns the outcome.",
+    "fchip-1": "Software architecture & engineering",
+    "fchip-2": "Real operational experience",
+    "fchip-3": "Founder-led, senior delivery",
+    "founder-role": "Founder · Software architect & operator",
+    "founder-linkedin-txt": "LinkedIn",
 
-  pt: {
-    // Nav
-    "nav-home": "Início",
-    "nav-about": "Sobre",
-    "nav-services": "Serviços",
-    "nav-team": "Indústrias",
-    "nav-contact": "Contato",
-    "btn-connect": "Fale conosco",
-    "lang-menu-header-title": "Selecionar localização",
+    // Who this is for
+    "fit-eyebrow": "Who this is for",
+    "fit-title": "Built for operations with real complexity.",
+    "fit-desc":
+      "We work best with growing, operationally complex businesses — especially family-owned companies professionalizing as they scale.",
+    "fit-1-t": "Distribution & wholesale",
+    "fit-1-d":
+      "Many SKUs, tight margins, and orders moving faster than your systems can track.",
+    "fit-2-t": "Logistics & transport",
+    "fit-2-d":
+      "Fleets, routes, and deliveries coordinated across spreadsheets and phone calls.",
+    "fit-3-t": "Agribusiness",
+    "fit-3-d":
+      "Production, stock, and sales spanning the field, the office, and everything between.",
+    "fit-more":
+      "Also a strong fit for manufacturing, construction, and multi-unit service businesses.",
 
-    // Hero
-    "hero-title": "Impulsionando o Crescimento com Estratégias Inteligentes",
-    "hero-description":
-      "Seu parceiro de confiança para inteligência de mercado, transformação digital e soluções de automação.",
-    "hero-icon1": "Consultoria de Negócios Estratégicos",
-    "hero-icon2": "Relatórios de Inteligência de Mercado",
-    "hero-icon3": "Soluções de Automação Tecnológica",
-    "hero-icon4": "Soluções para Operações de Negócios",
-    "hero-icon5": "Customizações e Integrações de Sistemas",
-
-    // About
-    "about-title": "Sobre Bento Almeida",
-    "about-intro":
-      "Bento Almeida é uma empresa de consultoria dedicada a ajudar as empresas a prosperarem através de inteligência de mercado, insights estratégicos e inovação tecnológica. Fazemos parceria com os clientes para transformar suas operações e alcançar um crescimento sustentável.",
-    "about-bullet1": "Estratégia de tecnologia e design de fundação digital.",
-    "about-bullet2": "Avaliação de capacidade tecnológica.",
-    "about-bullet3": "Modelo operacional de tecnologia.",
-    "about-summary":
-      "Nossa abordagem se baseia em soluções práticas que geram resultados mensuráveis. Combinamos vasta experiência no setor com tecnologias inovadoras para ajudar as empresas a lidar com desafios, aproveitar oportunidades e manter-se à frente em um mercado em rápida evolução. Com a Bento Almeida, você conta com um parceiro de confiança comprometido com seu sucesso, oferecendo orientação estratégica e soluções de ponta.",
-
-    // Features
-    "features-title1": "Percepções Orientadas por Dados",
-    "features-desc1":
-      "Aproveitando o poder da análise para decisões informadas",
-    "features-title2": "Soluções Personalizadas",
-    "features-desc2":
-      "Abordagens feitas sob medida para as necessidades únicas de cada cliente",
-    "features-title3": "Tecnologia Escalável",
-    "features-desc3": "Soluções que crescem com o seu negócio",
-    "features-title4": "Integrações Fluídas",
-    "features-desc4":
-      "Conectando sistemas e processos para eficiência operacional",
-    "features-title5": "Suporte Especializado",
-    "features-desc5": "Assistência contínua de especialistas do setor",
-
-    // Services
-    "services-heading": "Serviços",
-    "services-check": "Conheça nossos Serviços",
-    "services-span":
-      "Conjunto abrangente de serviços projetados para ajudar as empresas a superar obstáculos e implementar soluções eficientes",
-    "services-item1":
-      "Automação de Processos e Otimização de Fluxo de Trabalho",
-    "services-desc1":
-      "Utilizando IA, RPA e IoT para agilizar operações e reduzir custos.",
-    "services-item2": "Consultoria em Transformação Digital",
-    "services-desc2":
-      "Apoiando a adoção de computação em nuvem, sistemas ERP e plataformas de CRM.",
-    "services-item3": "Desenvolvimento de Software Sob Medida",
-    "services-desc3":
-      "Criação de aplicativos empresariais, APIs e microsserviços para eficiência operacional.",
-    "services-item4": "Integração de Sistemas & Infraestrutura de Tecnologia",
-    "services-desc4":
-      "Unificando plataformas e sistemas legados para fluxo de dados contínuo.",
-    "services-item5": "Business Intelligence & Análise de Dados",
-    "services-desc5":
-      "Fornecendo insights por meio de análise avançada de dados e modelagem preditiva.",
-    "services-item6": "Gerenciamento de Riscos & Cibersegurança",
-    "services-desc6":
-      "Implementando medidas de segurança para proteger ativos digitais e garantir conformidade.",
-
-    // CTA
-    "cta-title": "Você gostaria de expandir?",
-    "cta-text":
-      "Dê o primeiro passo para transformar seu negócio. Entre em contato para descobrir como nossas soluções podem impulsionar seu sucesso. Vamos construir um futuro mais inteligente juntos.",
-    "cta-btn": "Vamos nos conectar",
-
-    // Team (Industries)
-    "team-heading": "Indústrias",
-    "team-subheading": "Insights e Serviços",
-    "team-description":
-      "A Bento Almeida traz experiência específica do setor, entregando soluções sob medida para atender aos desafios exclusivos de cada segmento:",
-    "team-construction": "Construção",
-    "team-construction-desc":
-      "Apresentando sistemas de gerenciamento de projetos e ferramentas de relatórios automatizados para otimizar as operações.",
-    "team-manufacturing": "Manufatura",
-    "team-manufacturing-desc":
-      "Implementando IoT, manutenção preditiva e automação de processos para aumentar a eficiência.",
-    "team-logistics": "Logística",
-    "team-logistics-desc":
-      "Aprimorando a otimização de rotas, o rastreamento em tempo real e as soluções de gerenciamento de estoque.",
-    "team-consumer": "Bens de Consumo",
-    "team-consumer-desc":
-      "Aplicando análise de dados para ampliar a visibilidade da cadeia de suprimentos e os insights do consumidor.",
-
-    // Contact
-    "contact-heading": "Contato",
-    "contact-subheading": "Fale Conosco",
-    "contact-addr-title": "Endereço",
-    "contact-addr-desc": "11 KM Acaray, Ciudad del Este, PY",
-    "contact-call-title": "Ligue para Nós",
-    "contact-call-desc": "+595 984 455 760",
-    "contact-email-title": "Envie um E-mail",
-    "contact-email-desc": "thagesalmeida@bentoalmeida.com",
-    name: "Seu Nome",
-    email: "Seu E-mail",
-    subject: "Assunto",
-    message: "Mensagem",
-    "form-submit": "Enviar Mensagem",
+    // CTA / Contact
+    "cta-eyebrow": "The next step",
+    "cta-title":
+      "Let's find where your operation is getting in the way of your growth.",
+    "cta-desc":
+      "Start with a diagnostic — a focused working session that maps your biggest operational bottlenecks and exactly what to do about them.",
+    "contact-wpp-title": "WhatsApp",
+    "contact-email-title": "Email",
+    "contact-addr-title": "Where we are",
+    "contact-addr-desc":
+      "Ciudad del Este, Paraguay · serving the tri-border region & beyond",
+    name: "Your name",
+    email: "Work email",
+    subject: "Company — and what it does",
+    message: "What's the biggest operational headache right now?",
+    "form-submit": "Request your diagnostic",
 
     // Footer
-    "footer-links-title1": "Links Úteis",
-    "footer-link-home": "Início",
-    "footer-link-about": "Sobre Nós",
-    "footer-link-services": "Serviços",
-    "footer-link-terms": "Termos de serviço",
-    "footer-link-privacy": "Política de privacidade",
-    "footer-links-title2": "Nossos Serviços",
-    "footer-service1": "Design de Sites",
-    "footer-service2": "Desenvolvimento Web",
-    "footer-service3": "Gestão de Produtos",
-    "footer-service4": "Marketing",
-    "footer-service5": "Design Gráfico",
-    "footer-newsletter-title": "Nossa Newsletter",
-    "footer-newsletter-desc":
-      "Assine nossa newsletter e receba as últimas novidades sobre nossos produtos e serviços!",
+    "footer-tagline": "The system your business runs on.",
+    "footer-links-title": "Explore",
+    "footer-link-problem": "The problem",
+    "footer-link-approach": "Approach",
+    "footer-link-work": "Work",
+    "footer-link-about": "About",
+    "footer-link-contact": "Contact",
+    "footer-cta-title": "Ready when you are",
+    "footer-cta-desc": "Start with a diagnostic and see your operation clearly.",
+    "footer-cta-btn": "Start with a diagnostic",
+    "footer-rights": "© 2026 Bento Almeida. All rights reserved.",
   },
 
   es: {
     // Nav
-    "nav-home": "Inicio",
-    "nav-about": "Acerca de",
-    "nav-services": "Servicios",
-    "nav-team": "Industrias",
+    "nav-problem": "El problema",
+    "nav-approach": "Método",
+    "nav-work": "Casos",
+    "nav-about": "Nosotros",
     "nav-contact": "Contacto",
-    "btn-connect": "Conéctate con nosotros",
+    "nav-cta": "Empezar con un diagnóstico",
     "lang-menu-header-title": "Seleccionar ubicación",
 
     // Hero
-    "hero-title": "Impulsando el Crecimiento con Estrategias Inteligentes",
-    "hero-description":
-      "Su socio de confianza para inteligencia de mercado, transformación digital y soluciones de automatización industrial.",
-    "hero-icon1": "Consultoría Estratégica de Negocios",
-    "hero-icon2": "Informes de Inteligencia de Mercado",
-    "hero-icon3": "Soluciones de Automatización Tecnológica",
-    "hero-icon4": "Soluciones para Operaciones de Negocio",
-    "hero-icon5": "Personalizaciones e Integraciones de Sistemas",
+    "hero-eyebrow": "Para empresas en crecimiento y operativamente complejas",
+    "hero-title-1": "Su empresa creció.",
+    "hero-title-2": "Su forma de operar, no.",
+    "hero-desc":
+      "Sostiene una operación en crecimiento con planillas, WhatsApp y una decena de sistemas que no se hablan entre sí. Diseñamos y construimos el sistema integrado sobre el que su empresa realmente funciona — para que gane control, visibilidad y espacio para escalar.",
+    "hero-cta": "Encuentre su mayor cuello de botella",
+    "hero-cta2": "Hablar por WhatsApp",
+    "hero-trust":
+      "Con la confianza de empresas de distribución, logística y agronegocios.",
 
-    // About
-    "about-title": "Sobre Bento Almeida",
-    "about-intro":
-      "Bento Almeida es una firma de consultoría dedicada a ayudar a las empresas a sobresalir a través de inteligencia de mercado, información estratégica e innovación tecnológica. Nos asociamos con los clientes para transformar sus operaciones y lograr un crecimiento sostenible.",
-    "about-bullet1": "Estrategia de tecnología y diseño de base digital.",
-    "about-bullet2": "Evaluación de capacidad tecnológica.",
-    "about-bullet3": "Modelo operativo de tecnología.",
-    "about-summary":
-      "Nuestro enfoque se basa en ofrecer soluciones prácticas que generen resultados medibles. Combinamos una profunda experiencia en el sector con tecnologías innovadoras para ayudar a las empresas a enfrentar desafíos, aprovechar oportunidades y mantenerse a la vanguardia en un mercado en rápida evolución. Con Bento Almeida, obtiene un socio de confianza comprometido con su éxito a través de orientación estratégica y soluciones de vanguardia.",
+    // Recognition
+    "recog-eyebrow": "¿Le resulta familiar?",
+    "recog-title": "Así se siente cuando su empresa supera a sus sistemas.",
+    "recog-closer":
+      "La empresa crece. La operación que la sostiene no logra seguir el ritmo.",
+    "recog-1":
+      "Los números reales viven en la planilla de alguien — y solo esa persona sabe cómo funciona.",
+    "recog-2": "Las aprobaciones pasan por WhatsApp. Y todo lo demás también.",
+    "recog-3":
+      "Cada informe se rehace a mano y ya está desactualizado apenas termina.",
+    "recog-4": "Cuatro sistemas guardan sus datos. Ninguno coincide.",
+    "recog-5":
+      "Si la persona equivocada se va de vacaciones, una parte del negocio se detiene.",
 
-    // Features
-    "features-title1": "Perspectivas Basadas en Datos",
-    "features-desc1":
-      "Aprovechando el poder del análisis para la toma de decisiones informada",
-    "features-title2": "Soluciones Personalizadas",
-    "features-desc2":
-      "Enfoques adaptados a las necesidades únicas de cada cliente",
-    "features-title3": "Tecnología Escalable",
-    "features-desc3": "Soluciones que crecen junto con su negocio",
-    "features-title4": "Integraciones Fluidas",
-    "features-desc4":
-      "Conectando sistemas y procesos para una eficiencia operativa",
-    "features-title5": "Soporte Especializado",
-    "features-desc5": "Asistencia continua de expertos de la industria",
+    // Insight
+    "insight-eyebrow": "El verdadero problema",
+    "insight-title-1": "No necesita más software.",
+    "insight-title-2":
+      "Necesita que sus sistemas reflejen cómo trabaja realmente.",
+    "insight-desc":
+      "Cada herramienta nueva resolvió un problema y creó otra isla. Lo que falta no es otra app — es el sistema conectado que integra toda la operación.",
 
-    // Services
-    "services-heading": "Servicios",
-    "services-check": "Revisa nuestros Servicios",
-    "services-span":
-      "Conjunto integral de servicios diseñados para ayudar a las empresas a superar cuellos de botella e implementar soluciones eficientes",
-    "services-item1":
-      "Automatización de Procesos y Optimización del Flujo de Trabajo",
-    "services-desc1":
-      "Utilizando IA, RPA e IoT para optimizar operaciones y reducir costos.",
-    "services-item2": "Consultoría de Transformación Digital",
-    "services-desc2":
-      "Apoyando la adopción de computación en la nube, sistemas ERP y plataformas de CRM.",
-    "services-item3": "Desarrollo de Software a Medida",
-    "services-desc3":
-      "Creando aplicaciones empresariales, API y microservicios para la eficiencia operativa.",
-    "services-item4": "Integración de Sistemas e Infraestructura Tecnológica",
-    "services-desc4":
-      "Unificando plataformas y sistemas heredados para un flujo de datos sin problemas.",
-    "services-item5": "Inteligencia de Negocios & Análisis de Datos",
-    "services-desc5":
-      "Proporcionando información a través de análisis avanzados de datos y modelos predictivos.",
-    "services-item6": "Gestión de Riesgos & Ciberseguridad",
-    "services-desc6":
-      "Implementando medidas de seguridad para proteger los activos digitales y garantizar el cumplimiento.",
+    // What we do
+    "do-eyebrow": "Qué hacemos",
+    "do-title": "Construimos el sistema sobre el que funciona su empresa.",
+    "do-desc":
+      "Un solo lugar donde la información está conectada, el trabajo se automatiza y por fin puede ver qué pasa en la operación. No vendemos tecnología — eliminamos la fricción operativa que le cuesta tiempo, dinero y control.",
+    "do-1-t": "Conectado",
+    "do-1-d":
+      "Sus herramientas y datos por fin funcionan como un solo sistema, no como una decena de islas.",
+    "do-2-t": "Automatizado",
+    "do-2-d": "El trabajo repetitivo y manual se ejecuta solo — con precisión, siempre.",
+    "do-3-t": "Visible",
+    "do-3-d":
+      "Visibilidad en vivo de toda la operación, para que las decisiones dejen de ser adivinanzas.",
 
-    // CTA
-    "cta-title": "¿Le gustaría escalar?",
-    "cta-text":
-      "Dé el primer paso hacia la transformación de su negocio. Contáctenos para descubrir cómo nuestras ideas y soluciones pueden impulsar su éxito. Construyamos un futuro más inteligente juntos.",
-    "cta-btn": "Conectémonos",
+    // Method
+    "method-eyebrow": "Cómo funciona",
+    "method-title": "Un camino claro — no un salto de fe.",
+    "method-desc":
+      "Bajo riesgo, alta señal. Demostramos el valor en cada paso antes de construir el siguiente.",
+    "step1-t": "Diagnosticar",
+    "step1-d":
+      "Entendemos cómo opera realmente su empresa y encontramos los cuellos de botella, el trabajo manual y los puntos ciegos que la desgastan.",
+    "step2-t": "Diseñar",
+    "step2-d":
+      "Trazamos un plano práctico — los procesos, sistemas, integraciones y automatizaciones que más impacto generan.",
+    "step3-t": "Construir",
+    "step3-d":
+      "Implementamos las mejoras de mayor valor: integraciones, sistemas internos, automatizaciones, tableros e IA donde realmente aporta.",
 
-    // Team (Industries)
-    "team-heading": "Industrias",
-    "team-subheading": "Ideas y Servicios",
-    "team-description":
-      "Bento Almeida aporta experiencia específica en la industria, ofreciendo soluciones personalizadas para satisfacer los desafíos exclusivos de cada sector:",
-    "team-construction": "Construcción",
-    "team-construction-desc":
-      "Introduciendo sistemas de gestión de proyectos y herramientas de informes automatizados para optimizar las operaciones.",
-    "team-manufacturing": "Manufactura",
-    "team-manufacturing-desc":
-      "Implementando IoT, mantenimiento predictivo y automatización de procesos para mejorar la eficiencia.",
-    "team-logistics": "Logística",
-    "team-logistics-desc":
-      "Mejorando la optimización de rutas, el seguimiento en tiempo real y las soluciones de gestión de inventarios.",
-    "team-consumer": "Bienes de Consumo",
-    "team-consumer-desc":
-      "Aplicando análisis de datos para mejorar la visibilidad de la cadena de suministro y la comprensión del consumidor.",
+    // Transformation
+    "trans-eyebrow": "El cambio",
+    "trans-title": "Del caos operativo a un solo sistema.",
+    "from-title": "Hoy",
+    "from-1": "Información dispersa",
+    "from-2": "Trabajo manual y repetitivo",
+    "from-3": "Herramientas desconectadas",
+    "from-4": "Operaciones que dependen de personas específicas",
+    "from-5": "Operar a ciegas",
+    "to-title": "Con Bento Almeida",
+    "to-1": "Una única fuente de verdad conectada",
+    "to-2": "Flujos de trabajo automatizados",
+    "to-3": "Sistemas que se comunican entre sí",
+    "to-4": "Procesos que no dependen de ninguna persona",
+    "to-5": "Decisiones basadas en datos en tiempo real",
 
-    // Contact
-    "contact-heading": "Contacto",
-    "contact-subheading": "Contáctanos",
-    "contact-addr-title": "Dirección",
-    "contact-addr-desc": "11 KM Acaray, Ciudad del Este, PY",
-    "contact-call-title": "Llámanos",
-    "contact-call-desc": "+595 984 455 760",
-    "contact-email-title": "Envíanos un Correo",
-    "contact-email-desc": "thagesalmeida@bentoalmeida.com",
-    name: "Tu Nombre",
-    email: "Tu Correo Electrónico",
-    subject: "Asunto",
-    message: "Mensaje",
-    "form-submit": "Enviar Mensaje",
+    // Proof
+    "proof-eyebrow": "Pruebas",
+    "proof-title": "Operaciones reales, reconstruidas.",
+    "proof-desc":
+      "Cómo convertimos la complejidad operativa en sistemas que funcionan — el problema, qué cambió y el resultado.",
+    "label-problem-1": "El problema",
+    "label-problem-2": "El problema",
+    "label-problem-3": "El problema",
+    "label-changed-1": "Qué cambió",
+    "label-changed-2": "Qué cambió",
+    "label-changed-3": "Qué cambió",
+    "label-outcome-1": "El resultado",
+    "label-outcome-2": "El resultado",
+    "label-outcome-3": "El resultado",
+    "proof-logos-title": "Con la confianza de empresas de la región",
+
+    // Founder
+    "founder-eyebrow": "Quién está detrás",
+    "founder-lead":
+      "No contrata una agencia. Trabaja con alguien que estuvo de los dos lados.",
+    "founder-bio":
+      "Bento Almeida está liderada por un arquitecto de software e ingeniero que además entiende cómo funcionan las empresas de verdad — operaciones, gestión y la realidad desordenada del medio. Esa es la diferencia: diagnosticamos el negocio antes de tocar la tecnología. Menos manos, más experiencia y un socio que se hace cargo del resultado.",
+    "fchip-1": "Arquitectura e ingeniería de software",
+    "fchip-2": "Experiencia operativa real",
+    "fchip-3": "Liderado por su fundador, entrega senior",
+    "founder-role": "Fundador · Arquitecto de software y operador",
+    "founder-linkedin-txt": "LinkedIn",
+
+    // Who this is for
+    "fit-eyebrow": "Para quién es",
+    "fit-title": "Hecho para operaciones con complejidad real.",
+    "fit-desc":
+      "Trabajamos mejor con empresas en crecimiento y operativamente complejas — sobre todo empresas familiares que se profesionalizan mientras escalan.",
+    "fit-1-t": "Distribución y mayoristas",
+    "fit-1-d":
+      "Muchos SKUs, márgenes ajustados y pedidos que van más rápido de lo que sus sistemas pueden seguir.",
+    "fit-2-t": "Logística y transporte",
+    "fit-2-d":
+      "Flotas, rutas y entregas coordinadas entre planillas y llamadas.",
+    "fit-3-t": "Agronegocios",
+    "fit-3-d":
+      "Producción, stock y ventas que abarcan el campo, la oficina y todo lo que hay en medio.",
+    "fit-more":
+      "También un buen encaje para manufactura, construcción y negocios de servicios con múltiples unidades.",
+
+    // CTA / Contact
+    "cta-eyebrow": "El siguiente paso",
+    "cta-title":
+      "Encontremos dónde su operación está frenando su crecimiento.",
+    "cta-desc":
+      "Empiece con un diagnóstico — una sesión de trabajo enfocada que mapea sus mayores cuellos de botella y exactamente qué hacer al respecto.",
+    "contact-wpp-title": "WhatsApp",
+    "contact-email-title": "Email",
+    "contact-addr-title": "Dónde estamos",
+    "contact-addr-desc":
+      "Ciudad del Este, Paraguay · atendemos la triple frontera y más allá",
+    name: "Su nombre",
+    email: "Email de trabajo",
+    subject: "Empresa — y a qué se dedica",
+    message: "¿Cuál es hoy su mayor dolor de cabeza operativo?",
+    "form-submit": "Solicitar diagnóstico",
 
     // Footer
-    "footer-links-title1": "Enlaces Útiles",
-    "footer-link-home": "Inicio",
-    "footer-link-about": "Acerca de Nosotros",
-    "footer-link-services": "Servicios",
-    "footer-link-terms": "Términos del servicio",
-    "footer-link-privacy": "Política de privacidad",
-    "footer-links-title2": "Nuestros Servicios",
-    "footer-service1": "Diseño Web",
-    "footer-service2": "Desarrollo Web",
-    "footer-service3": "Gestión de Productos",
-    "footer-service4": "Marketing",
-    "footer-service5": "Diseño Gráfico",
-    "footer-newsletter-title": "Nuestro Boletín",
-    "footer-newsletter-desc":
-      "¡Suscríbase a nuestro boletín y reciba las últimas noticias sobre nuestros productos y servicios!",
+    "footer-tagline": "El sistema sobre el que funciona su empresa.",
+    "footer-links-title": "Explorar",
+    "footer-link-problem": "El problema",
+    "footer-link-approach": "Método",
+    "footer-link-work": "Casos",
+    "footer-link-about": "Nosotros",
+    "footer-link-contact": "Contacto",
+    "footer-cta-title": "Cuando esté listo",
+    "footer-cta-desc":
+      "Empiece con un diagnóstico y vea su operación con claridad.",
+    "footer-cta-btn": "Empezar con un diagnóstico",
+    "footer-rights": "© 2026 Bento Almeida. Todos los derechos reservados.",
+  },
+
+  pt: {
+    // Nav
+    "nav-problem": "O problema",
+    "nav-approach": "Método",
+    "nav-work": "Casos",
+    "nav-about": "Sobre",
+    "nav-contact": "Contato",
+    "nav-cta": "Comece com um diagnóstico",
+    "lang-menu-header-title": "Selecionar localização",
+
+    // Hero
+    "hero-eyebrow": "Para empresas em crescimento e operacionalmente complexas",
+    "hero-title-1": "Sua empresa cresceu.",
+    "hero-title-2": "A forma de operar, não.",
+    "hero-desc":
+      "Você sustenta uma operação em crescimento com planilhas, WhatsApp e uma dezena de sistemas que não conversam entre si. Projetamos e construímos o sistema integrado sobre o qual sua empresa realmente funciona — para você ganhar controle, visibilidade e espaço para escalar.",
+    "hero-cta": "Encontre seu maior gargalo",
+    "hero-cta2": "Falar no WhatsApp",
+    "hero-trust":
+      "Com a confiança de empresas de distribuição, logística e agronegócio.",
+
+    // Recognition
+    "recog-eyebrow": "Soa familiar?",
+    "recog-title": "É assim que parece quando a empresa supera os próprios sistemas.",
+    "recog-closer":
+      "A empresa cresce. A operação que a sustenta não acompanha.",
+    "recog-1":
+      "Os números reais vivem na planilha de alguém — e só essa pessoa sabe como funciona.",
+    "recog-2": "As aprovações acontecem no WhatsApp. E todo o resto também.",
+    "recog-3":
+      "Cada relatório é refeito à mão e já está desatualizado assim que termina.",
+    "recog-4": "Quatro sistemas guardam seus dados. Nenhum deles concorda.",
+    "recog-5":
+      "Se a pessoa errada sai de férias, parte do negócio para.",
+
+    // Insight
+    "insight-eyebrow": "O verdadeiro problema",
+    "insight-title-1": "Você não precisa de mais software.",
+    "insight-title-2":
+      "Você precisa que seus sistemas reflitam como você realmente trabalha.",
+    "insight-desc":
+      "Cada nova ferramenta resolveu um problema e criou outra ilha. O que falta não é mais um app — é o sistema conectado que integra toda a operação.",
+
+    // What we do
+    "do-eyebrow": "O que fazemos",
+    "do-title": "Construímos o sistema sobre o qual sua empresa funciona.",
+    "do-desc":
+      "Um único lugar onde a informação está conectada, o trabalho é automatizado e você finalmente enxerga o que acontece na operação. Não vendemos tecnologia — eliminamos o atrito operacional que custa tempo, dinheiro e controle.",
+    "do-1-t": "Conectado",
+    "do-1-d":
+      "Suas ferramentas e dados finalmente funcionam como um só sistema, não uma dezena de ilhas.",
+    "do-2-t": "Automatizado",
+    "do-2-d": "O trabalho repetitivo e manual roda sozinho — com precisão, sempre.",
+    "do-3-t": "Visível",
+    "do-3-d":
+      "Visibilidade em tempo real de toda a operação, para as decisões deixarem de ser achismo.",
+
+    // Method
+    "method-eyebrow": "Como funciona",
+    "method-title": "Um caminho claro — não um salto de fé.",
+    "method-desc":
+      "Baixo risco, alto sinal. Provamos o valor em cada etapa antes de construir a próxima.",
+    "step1-t": "Diagnosticar",
+    "step1-d":
+      "Entendemos como sua empresa realmente opera e encontramos os gargalos, o trabalho manual e os pontos cegos que a drenam.",
+    "step2-t": "Desenhar",
+    "step2-d":
+      "Traçamos um plano prático — os processos, sistemas, integrações e automações que geram mais impacto.",
+    "step3-t": "Construir",
+    "step3-d":
+      "Implementamos as melhorias de maior valor: integrações, sistemas internos, automações, painéis e IA onde realmente faz sentido.",
+
+    // Transformation
+    "trans-eyebrow": "A virada",
+    "trans-title": "Do caos operacional a um só sistema.",
+    "from-title": "Hoje",
+    "from-1": "Informação espalhada",
+    "from-2": "Trabalho manual e repetitivo",
+    "from-3": "Ferramentas desconectadas",
+    "from-4": "Operações que dependem de pessoas específicas",
+    "from-5": "Operar às cegas",
+    "to-title": "Com a Bento Almeida",
+    "to-1": "Uma única fonte de verdade conectada",
+    "to-2": "Fluxos de trabalho automatizados",
+    "to-3": "Sistemas que conversam entre si",
+    "to-4": "Processos que não dependem de ninguém em específico",
+    "to-5": "Decisões baseadas em dados em tempo real",
+
+    // Proof
+    "proof-eyebrow": "Provas",
+    "proof-title": "Operações reais, reconstruídas.",
+    "proof-desc":
+      "Como transformamos a complexidade operacional em sistemas que funcionam — o problema, o que mudou e o resultado.",
+    "label-problem-1": "O problema",
+    "label-problem-2": "O problema",
+    "label-problem-3": "O problema",
+    "label-changed-1": "O que mudou",
+    "label-changed-2": "O que mudou",
+    "label-changed-3": "O que mudou",
+    "label-outcome-1": "O resultado",
+    "label-outcome-2": "O resultado",
+    "label-outcome-3": "O resultado",
+    "proof-logos-title": "Com a confiança de empresas da região",
+
+    // Founder
+    "founder-eyebrow": "Quem está por trás",
+    "founder-lead":
+      "Você não contrata uma agência. Trabalha com alguém que já esteve nos dois lados.",
+    "founder-bio":
+      "A Bento Almeida é liderada por um arquiteto de software e engenheiro que também entende como as empresas funcionam de verdade — operação, gestão e a realidade bagunçada no meio do caminho. Essa é a diferença: diagnosticamos o negócio antes de tocar na tecnologia. Menos mãos, mais senioridade e um parceiro que assume o resultado.",
+    "fchip-1": "Arquitetura e engenharia de software",
+    "fchip-2": "Experiência operacional real",
+    "fchip-3": "Liderado pelo fundador, entrega sênior",
+    "founder-role": "Fundador · Arquiteto de software e operador",
+    "founder-linkedin-txt": "LinkedIn",
+
+    // Who this is for
+    "fit-eyebrow": "Para quem é",
+    "fit-title": "Feito para operações com complexidade real.",
+    "fit-desc":
+      "Trabalhamos melhor com empresas em crescimento e operacionalmente complexas — especialmente empresas familiares que se profissionalizam ao escalar.",
+    "fit-1-t": "Distribuição e atacado",
+    "fit-1-d":
+      "Muitos SKUs, margens apertadas e pedidos mais rápidos do que seus sistemas conseguem acompanhar.",
+    "fit-2-t": "Logística e transporte",
+    "fit-2-d":
+      "Frotas, rotas e entregas coordenadas entre planilhas e telefonemas.",
+    "fit-3-t": "Agronegócio",
+    "fit-3-d":
+      "Produção, estoque e vendas que vão do campo ao escritório e tudo no meio.",
+    "fit-more":
+      "Também um bom encaixe para indústria, construção e negócios de serviços com múltiplas unidades.",
+
+    // CTA / Contact
+    "cta-eyebrow": "O próximo passo",
+    "cta-title":
+      "Vamos encontrar onde sua operação está atrapalhando seu crescimento.",
+    "cta-desc":
+      "Comece com um diagnóstico — uma sessão de trabalho focada que mapeia seus maiores gargalos e exatamente o que fazer a respeito.",
+    "contact-wpp-title": "WhatsApp",
+    "contact-email-title": "E-mail",
+    "contact-addr-title": "Onde estamos",
+    "contact-addr-desc":
+      "Ciudad del Este, Paraguai · atendemos a tríplice fronteira e além",
+    name: "Seu nome",
+    email: "E-mail de trabalho",
+    subject: "Empresa — e o que ela faz",
+    message: "Qual é hoje a sua maior dor de cabeça operacional?",
+    "form-submit": "Solicitar diagnóstico",
+
+    // Footer
+    "footer-tagline": "O sistema sobre o qual sua empresa funciona.",
+    "footer-links-title": "Explorar",
+    "footer-link-problem": "O problema",
+    "footer-link-approach": "Método",
+    "footer-link-work": "Casos",
+    "footer-link-about": "Sobre",
+    "footer-link-contact": "Contato",
+    "footer-cta-title": "Quando você quiser",
+    "footer-cta-desc":
+      "Comece com um diagnóstico e enxergue sua operação com clareza.",
+    "footer-cta-btn": "Comece com um diagnóstico",
+    "footer-rights": "© 2026 Bento Almeida. Todos os direitos reservados.",
   },
 };
